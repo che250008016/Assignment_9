@@ -1,0 +1,38 @@
+
+#include <iostream>
+using namespace std;
+
+struct colour{
+    int red;
+    int green;
+    int blue;
+};
+
+int main() {
+    
+    colour colours[5]={
+        {50,32,52},
+        {87,42,57},
+        {89,90,134},
+        {234,56,123},
+        {236,78,239},
+    };
+
+for(int i=0;i<3;i++){
+    colours[i].red = 255 - colours[i].red;
+    colours[i].green = 255 - colours[i].green;
+    colours[i].blue = 255 - colours[i].blue;
+   
+}
+
+cout<<"the new set of colors with first three inverted are:"<<endl;
+
+for (int i=0;i<5;i++){
+    cout<<colours[i].red<<",";
+    cout<<colours[i].green<<",";
+    cout<<colours[i].blue<<endl;
+    
+}
+
+    return 0;
+}
