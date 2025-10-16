@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+struct points{
+    float x;
+    float y;
+};
+
+int main() {
+    points point[7];
+    
+for(int i=0;i<6;i++){
+    cout<<"enter the point\n";
+    cin>>point[i].x>>point[i].y;
+    cout<<endl;
+}
+int count = 0;
+for(int i=0;i<6;i++){
+if(point[i].x>0 && point[i].y>0){
+    count++;
+}
+   
+}
+
+cout<<"the total no. of points in first quad are:"<<count<<endl;
+
+
+    return 0;
+}
