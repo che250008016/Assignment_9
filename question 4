@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+struct SalesRecord{
+    string month;
+    float amount;
+};
+
+int main() {
+    SalesRecord record[12];
+    
+for(int i=0;i<12;i++){
+    cout<<"enter the month and sale of that month\n";
+    cin>>record[i].month>>record[i].amount;
+    cout<<endl;
+}
+string maxm=record[0].month;
+string minm=record[0].month;
+float maxa=record[0].amount;
+float mina=record[0].amount;
+int x;
+int y;
+
+for(int i=0;i<12;i++){
+
+    if(maxa<record[i].amount){
+    maxa=record[i].amount;
+      x = i;
+      
+    }
+    if(mina>record[i].amount){
+   mina=record[i].amount;
+        y=i;
+        
+    }
+    
+}
+   
+
+
+cout<<"max sale is in the month:"<<record[x].month<<endl;
+cout<<"max sale in that month is:"<<maxa<<endl;
+cout<<"min sale is in the month:"<<record[y].month<<endl;
+cout<<"min sale in that month is:"<<mina<<endl;
+
+
+
+    return 0;
+}
